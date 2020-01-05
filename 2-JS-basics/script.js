@@ -631,27 +631,6 @@ for (var i = john.length - 1; i >= 0; i--) {
 }
 */
 
-var abc={
-
-
-    bill:[];
-    tip:function()
-    {
-        
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 /*****************************
 * CODING CHALLENGE 5
 */
