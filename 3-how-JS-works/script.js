@@ -16,7 +16,7 @@ function calculateAge(year) {
 //Hoisting Does not work here.
 //It works only for function declaration and not function expression.
 
-// retirement(1956);
+// retirement(1956); //Compilation Error
 var retirement = function(year) {
     console.log(65 - (2016 - year));
 }
@@ -24,17 +24,17 @@ var retirement = function(year) {
 
 // variables
 
-console.log(age);//This is undefined because in creation phase for vatiables, a property is created in Variable Object ,which is set to undefined.
+console.log(age);//This is undefined because in creation phase for variables, a property is created in Variable Object ,which is set to undefined.
 
 var age = 23;//This is declared in Global Execution Context Object 
 
 function foo() {
-    console.log(age);// This is undefined because it is within the foo function so uses Execution Context Object of foo function 
+    console.log(age);// This is undefined because there is an age  within the foo function so uses Execution Context Object of foo function 
     var age = 65; //This is declared in  Execution Context Object of foo function 
-    console.log(age);
+    console.log(age);//Prints 65
 }
 foo();
-console.log(age);
+console.log(age);//Print 23
 */
 
 
@@ -48,6 +48,7 @@ var a = 'Hello!';
 first();
 
 function first() {
+    console.log(a);//Here Hello is printed ,as there is no new a declared within the scope
     var b = 'Hi!';
     second();
 
