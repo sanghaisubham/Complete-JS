@@ -75,10 +75,8 @@ var jane = Object.create(personProto, {
 var a = 23;
 var b = a;
 a = 46;
-console.log(a);
+console.log(a); //a changed but b did not change 
 console.log(b);
-
-
 
 // Objects
 var obj1 = {
@@ -87,7 +85,7 @@ var obj1 = {
 };
 var obj2 = obj1;
 obj1.age = 30;
-console.log(obj1.age);//both changed
+console.log(obj1.age);//both changed as reference is stored
 console.log(obj2.age);
 
 
@@ -142,12 +140,16 @@ function maxHeartRate(el) {
     }
 }
 
-
+//A callback function, also known as a higher-order function, is a function that is passed to another function 
+//(let’s call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction. 
+//A callback function is essentially a pattern (an established solution to a common problem), and therefore,the use of a callback function is also known as a callback pattern.
+    
 var ages = arrayCalc(years, calculateAge);//calculateAge is callback function
 var fullAges = arrayCalc(ages, isFullAge);
 var rates = arrayCalc(ages, maxHeartRate);
 
 console.log(ages);
+console.log(fullAges);
 console.log(rates);
 */
 
@@ -203,7 +205,6 @@ game();
     console.log(score >= 5);
 })();
 
-//console.log(score);
 
 //Immediately invoked functions with parameter
 (function (goodLuck) {
@@ -251,6 +252,8 @@ function interviewQuestion(job) {
 }
 
 interviewQuestion('teacher')('John');
+
+//Here after first function is called , it returned another function which still can access the value of job
 */
 
 
